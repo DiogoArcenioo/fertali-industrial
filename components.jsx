@@ -231,7 +231,7 @@ const Strip = () => (
       <span>DOBRA</span>
       <span>CORTE</span>
     </Marquee>
-  </section>
+  </section> 
 );
 
 // =====================================================================
