@@ -1,4 +1,4 @@
-/* global React, ReactDOM, Nav, Hero, Strip, Sobre, Produtos, Servicos, Projetos, CTA, Footer */
+/* global React, ReactDOM, Nav, Hero, Strip, Sobre, Produtos, Servicos, Projetos, CTA, Footer, WhatsAppFloat */
 /* global useTweaks, TweaksPanel, TweakSection, TweakRadio, TweakSelect, TweakToggle, TweakText */
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
@@ -29,6 +29,7 @@ function App() {
       <Projetos />
       <CTA />
       <Footer />
+      <WhatsAppFloat />
 
       <TweaksPanel title="Tweaks · Fertali">
         <TweakSection label="Tema" />

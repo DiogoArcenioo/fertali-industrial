@@ -423,7 +423,7 @@ const Projetos = () => (
       {PROJECTS.map((p, i) => (
         <Reveal as="article" key={p.code} className={`proj ${p.span === 'wide' ? 'proj--wide' : ''}`} delay={i * 80}>
           <div className="proj__media">
-            <Placeholder label={p.code} ratio={p.span === 'wide' ? '21/9' : '4/5'} />
+            <Placeholder label={p.code} ratio="4/3" />
             <span className="proj__cat">{p.cat}</span>
           </div>
           <div className="proj__meta">
@@ -516,8 +516,6 @@ const Footer = () => (
         <div className="footer__col">
           <div className="footer__label">Redes sociais</div>
           <div className="footer__socials">
-            <a href="#" aria-label="LinkedIn" className="footer__social"><SocialIcon kind="in" /></a>
-            <a href="#" aria-label="Instagram" className="footer__social"><SocialIcon kind="ig" /></a>
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="footer__social"><SocialIcon kind="wa" /></a>
             <a href={`mailto:${EMAIL_COMERCIAL}`} aria-label="E-mail" className="footer__social"><SocialIcon kind="mail" /></a>
           </div>
@@ -535,9 +533,27 @@ const Footer = () => (
 );
 
 // =====================================================================
+// WHATSAPP FLOAT
+// =====================================================================
+
+const WhatsAppFloat = () => (
+  <a
+    href={WHATSAPP_LINK}
+    className="wa-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar pelo WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+      <path d="M20 12a8 8 0 0 1-12.1 6.9L4 20l1.2-3.7A8 8 0 1 1 20 12Z M9 9.5c.2 1.5 1.7 3.3 3.5 4.3.7.4 1.3.4 1.8 0l.6-.6c.2-.2.5-.2.7 0l1.3 1c.2.2.2.5 0 .7-.6.7-1.4 1.1-2.3 1.1-3 0-6-3-6-6 0-.9.4-1.7 1.1-2.3.2-.2.5-.2.7 0l1 1.3c.2.2.2.5 0 .7l-.6.6c-.4.5-.4 1.1 0 1.8" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/>
+    </svg>
+  </a>
+);
+
+// =====================================================================
 // EXPORTS
 // =====================================================================
 
 Object.assign(window, {
-  Nav, Hero, Strip, Sobre, Produtos, Servicos, Projetos, CTA, Footer,
+  Nav, Hero, Strip, Sobre, Produtos, Servicos, Projetos, CTA, Footer, WhatsAppFloat,
 });
